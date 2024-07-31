@@ -62,13 +62,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    justify-content: right;
+    align-items: flex-start;
+    margin-top: 30%;
 
 
     .header__h2 {
-        // width: 15em;
+        width: 15em;
         color: #F9F8CF;
-        font-size: 48px;
+        font-size: 24px;
         font-family: "Roboto-Medium";
         font-weight: 300;
         padding: 10px;

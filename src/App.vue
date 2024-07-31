@@ -1,17 +1,23 @@
 <script setup>
   import { ref } from 'vue';
-import ServicesList from './components/ServicesList.vue';
-
+  import ServicesList from './components/ServicesList.vue';
+  import loveImage from "./img/love.jpg";
+  import no_love from "./img/no_love.jpg";
+  import healthImage from "./img/health.jpg";
+  import forecastImage from "./img/forecast.jpg";
+  import robberImage from "./img/robber.jpg";
+  import eventsImage from "./img/events.jpg";
+  
   const services = ref([
     {
       name: "Любовь в 2024 году",
       description: "У каждого из нас бывают периоды, когда в нашей карте Бацзы затрагивается Дом Брака" + "Дом Брака — второй столп в карте под названием «День» или «Личность»",
-      imagePath: "/src/img/love.jpg"
+      imagePath: loveImage
     },
     {
       name: "Развод в 2024",
       description: "Зона риска в 2024г в отношениях",
-      imagePath: "/src/img/no_love.jpg"
+      imagePath: no_love
     },
     {
       name: "Здоровье в 2024",
@@ -19,22 +25,22 @@ import ServicesList from './components/ServicesList.vue';
                   "– какие болезни могут активизироваться?" +
                   "– каким органам стоит уделить внимание"  +
                   "– кто будет в зоне риска и кому стоит выделить тему здоровья в своём планере на год",
-      imagePath: "/src/img/health.jpg"
+      imagePath: healthImage
     },
     {
       name: "Прогноз по элементам",
       description: "Ежедневно выкладывается прогноз на день для всех элементов, но Вы также можете более подробно узнать для себя",
-      imagePath: "/src/img/forecast.jpg"
+      imagePath: forecastImage
     },
     {
       name: "События в 2024",
       description: "Что ждет нас в грядущем году",
-      imagePath: "/src/img/events.jpg"
+      imagePath: eventsImage
     },
     {
       name: "Грабитель богатства",
       description: "Дни грабителя — это дни, когда деньги могут уйти из вашего кошелька. Поэтому рекомендуется самим запланировать траты, чтобы финансы не ушли сами собой.",
-      imagePath: "/src/img/robber.jpg"
+      imagePath: robberImage
     }
   ])
 </script>
