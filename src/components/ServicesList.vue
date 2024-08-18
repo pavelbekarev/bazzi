@@ -8,6 +8,6 @@
 
 <template>
     <div v-for="service of services" :key="service.name" class="service__item-wrapper">
-        <ServiceComponent :name="service.name" :description="service.description" :image-path="service.imagePath" />
+        <ServiceComponent :tabindex="service.index" :name="service.name" :description="service.description" :image-path="service.imagePath" />
     </div>
 </template>

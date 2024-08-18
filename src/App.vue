@@ -1,23 +1,30 @@
 <script setup>
   import { ref } from 'vue';
   import ServicesList from './components/ServicesList.vue';
-  import loveImage from "./img/love.jpg";
-  import no_love from "./img/no_love.jpg";
-  import healthImage from "./img/health.jpg";
+  // import loveImage from "./img/love.jpg";
+  // import no_love from "./img/no_love.jpg";
+  // import healthImage from "./img/health.jpg";
+  // import forecastImage from "./img/forecast.jpg";
+  // import robberImage from "./img/robber.jpg";
+  // import eventsImage from "./img/events.jpg";
+
+  import love_tree from "./img/love_tree.jpg";
+  import no_love2 from "./img/no_love2.jpg";
+  import health2 from "./img/health2.jpg";
   import forecastImage from "./img/forecast.jpg";
-  import robberImage from "./img/robber.jpg";
-  import eventsImage from "./img/events.jpg";
+  import gold_dragon from "./img/gold_dragon.jpg";
+  import dragon from "./img/dragon.jpg";
   
   const services = ref([
     {
       name: "Любовь в 2024 году",
       description: "У каждого из нас бывают периоды, когда в нашей карте Бацзы затрагивается Дом Брака" + "Дом Брака — второй столп в карте под названием «День» или «Личность»",
-      imagePath: loveImage
+      imagePath: love_tree
     },
     {
       name: "Развод в 2024",
       description: "Зона риска в 2024г в отношениях",
-      imagePath: no_love
+      imagePath: no_love2
     },
     {
       name: "Здоровье в 2024",
@@ -25,7 +32,7 @@
                   "– какие болезни могут активизироваться?" +
                   "– каким органам стоит уделить внимание"  +
                   "– кто будет в зоне риска и кому стоит выделить тему здоровья в своём планере на год",
-      imagePath: healthImage
+      imagePath: health2
     },
     {
       name: "Прогноз по элементам",
@@ -35,12 +42,12 @@
     {
       name: "События в 2024",
       description: "Что ждет нас в грядущем году",
-      imagePath: eventsImage
+      imagePath: dragon
     },
     {
       name: "Грабитель богатства",
       description: "Дни грабителя — это дни, когда деньги могут уйти из вашего кошелька. Поэтому рекомендуется самим запланировать траты, чтобы финансы не ушли сами собой.",
-      imagePath: robberImage
+      imagePath: gold_dragon
     }
   ])
 </script>
@@ -66,16 +73,24 @@
 
 
   <main >
-    <div class="services__wrapper">
-      <div class="container">
-        <div class="services__content">
-          <h2 class="services__h2">Услуги</h2>
-          <div class="services">
-            <ServicesList :services="services"/>
+    <section>
+      <div class="services__wrapper">
+        <div class="container">
+          <div class="services__content">
+            <h2 class="services__h2">Услуги</h2>
+            <div class="services">
+              <ServicesList :services="services"/>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section>
+      <div class="contact__wrapper">
+        
+      </div>
+    </section>
+    
   </main>
 </template>
 
