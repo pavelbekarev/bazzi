@@ -5,14 +5,14 @@
     height: 100%;
     display: flex;
     justify-content: center;align-items: center;
-    padding: 60px 0;
+    padding: 100px 0;
 
     .contact-form__wrapper {
         display: flex;
         flex-direction: row;
         width: 970px;
         height: 764px;
-        opacity: .85;
+        opacity: .95;
 
 
         .offer-to-contact {
@@ -24,6 +24,7 @@
 
             
             .offer__h2 {
+                color: #000000;
                 font-size: 40px;
                 opacity: 1;
             }
