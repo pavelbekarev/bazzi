@@ -55,12 +55,15 @@
         justify-content: center;
         align-items: center;
         // gap: 50px;
-        border: 3px solid white;
+        // border: 3px solid white;
         border-radius: 5px;
         max-width: 370px;
         height: 25em;
         overflow-y: hidden;
-
+        background-color: #22443A;
+        transition: all 0.3s ease;
+        border: 3px #b2b2b2 solid;
+        border-radius: 5px;
 
         .service__item-image {
             width: 60%;
@@ -98,6 +101,9 @@
             flex-direction: column;
             // justify-content: center;
             gap: 10px;
+            border: 3px solid white;
+            background-color: transparent;
+            transition: all 0.3s ease;
         }
 
         &:hover .service__item-description {
