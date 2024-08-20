@@ -93,7 +93,7 @@
             <div class="offer-to-contact">
               <h2 class="offer__h2">Свяжитесь со мной</h2>
               <div class="socials">
-                <a href=""><img class="form__offer-icon" src="./img/telegram.svg" alt="telegram icon"></a>
+                <a href=""><img title="Телеграм канал" class="form__offer-icon" src="./img/telegram.svg" alt="telegram icon"></a>
                 <a href=""><img class="form__offer-icon" src="./img/iconmonstr-vk-1.svg" alt="VK icon"></a>
               </div>
             </div>

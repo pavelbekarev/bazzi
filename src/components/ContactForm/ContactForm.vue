@@ -25,5 +25,7 @@
                 <input id="topic" class="booking__input" type="text" v-model="topicValue">
             </div>
         </div>
+
+        <button class="book-button">Записаться</button>
     </div>
 </template>

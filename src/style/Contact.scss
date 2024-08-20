@@ -21,12 +21,32 @@
             justify-content: center;align-items: center;
             background-color: #22443A;
             width: 70%;
+            gap: 92px;
 
             
             .offer__h2 {
-                color: #000000;
+                font-family: "Roboto-Medium";
+                text-align: center;
+                color: #b4b4b4;
+                letter-spacing: 4px;
                 font-size: 40px;
                 opacity: 1;
+            }
+
+            .socials {
+                display: flex;
+                justify-content: center;align-items: center;
+                gap: 20px;
+
+
+                .form__offer-icon {
+                    border: 1px #858585 solid;
+                    border-radius: 40px;
+                    padding: 10px;
+                    width: 80px;
+                    height: 80px;
+                    background-color: white;
+                }
             }
         }
 
@@ -82,14 +102,43 @@
                         border: none;
                         border-bottom: 1px #858585 solid;
                         border-radius: 4px;
+                        outline: none;
                         transition: outline 1s ease-out;
+
+
+                        &:focus {
+                            border-bottom: 1px #22443A solid;
+                            transition: border-bottom 0.3s ease;
+                        }
                     }
                 }
+            }
 
-
+            .book-button {
+                display: flex;
+                width: 50%;
+                justify-content: center;
+                align-items: center;
+                margin: 85px auto;                
+                padding: 14px 48px;
+                border-radius: 7px;
+                // outline: 1px solid black;
+                border: none;
                 
+                font-size: 24px;
+                color: #22443A;
+                font-family: "Roboto-Bold";
+                letter-spacing: 2px;
+
+
+                &:hover,
+                &:focus {
+                    background-color: #22443A;
+                    color: white;
+                    transition: all 0.3s ease-out;
+                    outline: none;
+                }
             }
         }
-        
     }
 }
