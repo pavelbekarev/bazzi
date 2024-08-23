@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue';
-  import ServicesList from './components/ServicesList.vue';
   import ContactForm from './components/ContactForm/ContactForm.vue';
+  
   // import loveImage from "./img/love.jpg";
   // import no_love from "./img/no_love.jpg";
   // import healthImage from "./img/health.jpg";
@@ -15,42 +15,125 @@
   import forecastImage from "./img/forecast.jpg";
   import gold_dragon from "./img/gold_dragon.jpg";
   import dragon from "./img/dragon.jpg";
+import ServicesList from './components/ServicesList.vue';
   
   const services = ref([
     {
-      name: "Любовь в 2024 году",
-      description: "У каждого из нас бывают периоды, когда в нашей карте Бацзы затрагивается Дом Брака" + "Дом Брака — второй столп в карте под названием «День» или «Личность»",
-      imagePath: love_tree
+      name: "Прогноз на Год",
+      description: "Эта услуга позволяет рассмотреть все сферы вашей жизни этого года. Определение текущих задач, актуальных направлений и перспектив на текущий год",
+      description_points: [
+        "Определение текущих задач, актуальных направлений и перспектив на текущий год;",
+        "Анализ возможностей;",
+        "Рассмотрение перспектив в отношениях, перспективы создания семьи;",
+        "Здоровье: на что обратить внимание, как укрепить здоровье;",
+        "Рекомендации как эффективно прожить год;",
+        "Советы, позволяющие скорректировать негативные тенденции года и привлечь удачу."
+      ],
+      imagePath: gold_dragon,
+      format: "текстовый файл / аудиоформат",
+      price: "3000 ₽"
     },
     {
-      name: "Развод в 2024",
-      description: "Зона риска в 2024г в отношениях",
-      imagePath: no_love2
+      name: "Разбор карты ребенка",
+      description: "Астрологический разбор карты ребенка - это уникальная услуга, которая помогает родителям лучше понять своего малыша и направить его развитие.",
+      description_points: [
+        "Анализ возможных проблем со здоровьем;",
+        "Как понять внутренний мир своего ребенка и научиться с ним гармонично взаимодействовать;",
+        "Какие таланты и способности стоит развивать, а на какие, напротив, не стоит тратить свое время;",
+        "Профессиональная ориентация и ключевые направления для изучения (вуз, специальность, кружок, секция, спорт);",
+        "Сильные стороны ребенка, его таланты, склонности, а также возможные трудности и вызовы;",
+        "Описание характера и темперамента ребенка: анализ каким ребенком он будет: активным или спокойным, общительным или замкнутым, творческим или практичным."
+      ],
+      imagePath: gold_dragon,
+      format: "текстовый файл / аудиоформат",
+      price: "3000 ₽"
     },
     {
-      name: "Здоровье в 2024",
-      description:"Многих волнуют вопросы:"                 +
-                  "– какие болезни могут активизироваться?" +
-                  "– каким органам стоит уделить внимание"  +
-                  "– кто будет в зоне риска и кому стоит выделить тему здоровья в своём планере на год",
-      imagePath: health2
+      name: "Одна сфера",
+      description: "Эта услуга представляет собой полноценный ответ по одному из интересующих Вас направлений",
+      description_points: [
+        "Здоровье: Вероятные проблемы со здоровьем; способы нейтрализации негативных аспектов; практические советы по улучшению здоровья; сложные периоды и риски для здоровья; как поддерживать своё здоровье; слабые и сильные точки вашего тела;",
+        "Карьера: ваши сильные и слабые стороны, преимущества; самая прибыльная сфера и профессия; предназначение; скрытые таланты; конкретные действия для привлечения денежной удачи; потенциал богатства; самый благоприятный период для запуска проекта или бизнеса; лучший формат работы: найм или фриланс;",
+        "Другие сферы на ваш выбор."
+      ],
+      imagePath: gold_dragon,
+      format: "видеоразбор длительностью 60 минут",
+      price: "4000 ₽"
     },
     {
-      name: "Прогноз по элементам",
-      description: "Ежедневно выкладывается прогноз на день для всех элементов, но Вы также можете более подробно узнать для себя",
-      imagePath: forecastImage
+      name: "Индивидуальный видеоразбор",
+      description: "Эта услуга представляет собой полноценный ответ по одному из интересующих Вас направлений",
+      description_points: [
+        "Здоровье: Вероятные проблемы со здоровьем; способы нейтрализации негативных аспектов; практические советы по улучшению здоровья; сложные периоды и риски для здоровья; как поддерживать своё здоровье; слабые и сильные точки вашего тела;",
+        "Карьера: ваши сильные и слабые стороны, преимущества; самая прибыльная сфера и профессия; предназначение; скрытые таланты; конкретные действия для привлечения денежной удачи; потенциал богатства; самый благоприятный период для запуска проекта или бизнеса; лучший формат работы: найм или фриланс;",
+        "Другие сферы на ваш выбор."
+      ],
+      imagePath: gold_dragon,
+      format: "видеоразбор длительностью 60 минут",
+      price: "4000 ₽"
     },
-    {
-      name: "События в 2024",
-      description: "Что ждет нас в грядущем году",
-      imagePath: dragon
-    },
-    {
-      name: "Грабитель богатства",
-      description: "Дни грабителя — это дни, когда деньги могут уйти из вашего кошелька. Поэтому рекомендуется самим запланировать траты, чтобы финансы не ушли сами собой.",
-      imagePath: gold_dragon
-    }
+
+
+
+
+
+    // {
+    //   name: "Разбор карты ребенка",
+    //   description: "Астрологический разбор карты ребенка - это уникальная услуга, которая помогает родителям лучше понять своего малыша и направить его развитие.",
+    //   description_points: "",
+    //   imagePath: love_tree
+    // },
+    // {
+    //   name: "Одна сфера",
+    //   description: "Эта услуга представляет собой полноценный ответ по одному из интересующих Вас направлений",
+    //   description_points: "",
+    //   imagePath: no_love2
+    // },
+    // {
+    //   name: "Прогноз на месяц",
+    //   description:"Эта услуга приоткрывает события грядущего месяца и позволяет рассмотреть интересующие вас вопросы",
+    //   description_points: "",
+    //   imagePath: health2
+    // },
+    // {
+    //   name: "Прогноз по элементам",
+    //   description: "Ежедневно выкладывается прогноз на день для всех элементов, но Вы также можете более подробно узнать для себя",
+    //   description_points: "",
+    //   imagePath: forecastImage
+    // },
+    // {
+    //   name: "События в 2024",
+    //   description: "Что ждет нас в грядущем году",
+    //   description_points: "",
+    //   imagePath: dragon
+    // },
+    // {
+    //   name: "Грабитель богатства",
+    //   description: "Дни грабителя — это дни, когда деньги могут уйти из вашего кошелька. Поэтому рекомендуется самим запланировать траты, чтобы финансы не ушли сами собой.",
+    //   description_points: "",
+    //   imagePath: gold_dragon
+    // }
   ])
+
+
+  const modalWindow_active = ref(false);
+  const activeService = ref(null);
+
+  // Закрытие модального окна при клике на крестик 
+  const closeModalWindow_button = () => {
+    modalWindow_active.value = false;
+    activeService.value = null;
+  }
+  // Открытие модального окна при клике на "Читать подробнее"
+  const clickReadMore_button = (service) => {
+    modalWindow_active.value = true;
+    activeService.value = service;
+
+    console.log(activeService);
+    console.log(modalWindow_active);
+
+  }
+
 </script>
 
 <template>
@@ -80,7 +163,50 @@
           <div class="services__content">
             <h2 class="services__h2">Услуги</h2>
             <div class="services">
-              <ServicesList :services="services"/>
+              <div v-for="service of services" :key="service.index" class="service__item-wrapper">
+                <ServicesList 
+                    :service="service"
+                />
+                <a 
+                  @click="clickReadMore_button(service)"
+                  id="read-more__button" 
+                  class="read-more__button" 
+                >
+                  Читать подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="modalWindow">
+            <div 
+                v-if="modalWindow_active"
+                class="modal-window__wrapper"
+            >
+              <div class="content-wrapper">
+                
+                <div class="content">
+                  <span 
+                    @click="closeModalWindow_button" 
+                    class="close-button"
+                  >
+                    х
+                  </span>
+                  <h2 class="content-h2">{{ activeService.name }}</h2>
+                  <ul 
+                    v-for="point of activeService.description_points" 
+                    :key="point.index" 
+                    class="content-list"
+                  >
+                    <li class="content-list__item">{{point}}</li>
+                    
+                  </ul>
+                  <div class="additionally-info">
+                    <p>Формат: {{ activeService.format }}</p>
+                    <p>Стоимость: {{ activeService.price }}</p>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -93,8 +219,12 @@
             <div class="offer-to-contact">
               <h2 class="offer__h2">Свяжитесь со мной</h2>
               <div class="socials">
-                <a href=""><img title="Телеграм канал" class="form__offer-icon" src="./img/telegram.svg" alt="telegram icon"></a>
-                <a href=""><img class="form__offer-icon" src="./img/iconmonstr-vk-1.svg" alt="VK icon"></a>
+                <a href="">
+                  <img title="Телеграм канал" class="form__offer-icon" src="./img/telegram.svg" alt="telegram icon">
+                </a>
+                <a href="">
+                  <img class="form__offer-icon" src="./img/iconmonstr-vk-1.svg" alt="VK icon">
+                </a>
               </div>
             </div>
             <ContactForm />

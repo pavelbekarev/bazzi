@@ -1,13 +1,24 @@
 <script setup>
     defineProps({
-        services: Array
+        service: Object
     })
 
     import ServiceComponent from './ServiceComponent.vue';
+    import { onUpdated, ref } from 'vue';
+
+    const modalWindow_active = ref(false);
+    onUpdated(() => {
+        console.log(modalWindow_active.value)
+    })
+
 </script>
 
 <template>
-    <div v-for="service of services" :key="service.name" class="service__item-wrapper">
-        <ServiceComponent :tabindex="service.index" :name="service.name" :description="service.description" :image-path="service.imagePath" />
-    </div>
+    <ServiceComponent 
+        :tabindex="service.index" 
+        :name="service.name" 
+        :description="service.description" 
+        :image-path="service.imagePath" 
+    />
+    
 </template>
