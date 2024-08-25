@@ -1,5 +1,5 @@
 <script setup>
-    import "../../style/Contact.scss";
+    import "../../style/MainPage/Contact.scss";
     import { ref } from "vue";
 
     // script
