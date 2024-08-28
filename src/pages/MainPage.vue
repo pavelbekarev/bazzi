@@ -29,7 +29,11 @@
         "Какие таланты и способности стоит развивать, а на какие, напротив, не стоит тратить свое время;",
         "Профессиональная ориентация и ключевые направления для изучения (вуз, специальность, кружок, секция, спорт);",
         "Сильные стороны ребенка, его таланты, склонности, а также возможные трудности и вызовы;",
-        "Описание характера и темперамента ребенка: анализ каким ребенком он будет: активным или спокойным, общительным или замкнутым, творческим или практичным."
+        "Описание характера и темперамента ребенка: анализ каким ребенком он будет: активным или спокойным, общительным или замкнутым, творческим или практичным.",
+        "Как понять внутренний мир своего ребенка и научиться с ним гармонично взаимодействовать;",
+        "Какие таланты и способности стоит развивать, а на какие, напротив, не стоит тратить свое время;",
+        "Профессиональная ориентация и ключевые направления для изучения (вуз, специальность, кружок, секция, спорт);",
+        "Сильные стороны ребенка, его таланты, склонности, а также возможные трудности и вызовы;"
       ],
       imagePath: gold_dragon,
       format: "текстовый файл / аудиоформат",
@@ -59,47 +63,6 @@
       format: "видеоразбор длительностью 60 минут",
       price: "4000 ₽"
     },
-
-
-
-
-
-    // {
-    //   name: "Разбор карты ребенка",
-    //   description: "Астрологический разбор карты ребенка - это уникальная услуга, которая помогает родителям лучше понять своего малыша и направить его развитие.",
-    //   description_points: "",
-    //   imagePath: love_tree
-    // },
-    // {
-    //   name: "Одна сфера",
-    //   description: "Эта услуга представляет собой полноценный ответ по одному из интересующих Вас направлений",
-    //   description_points: "",
-    //   imagePath: no_love2
-    // },
-    // {
-    //   name: "Прогноз на месяц",
-    //   description:"Эта услуга приоткрывает события грядущего месяца и позволяет рассмотреть интересующие вас вопросы",
-    //   description_points: "",
-    //   imagePath: health2
-    // },
-    // {
-    //   name: "Прогноз по элементам",
-    //   description: "Ежедневно выкладывается прогноз на день для всех элементов, но Вы также можете более подробно узнать для себя",
-    //   description_points: "",
-    //   imagePath: forecastImage
-    // },
-    // {
-    //   name: "События в 2024",
-    //   description: "Что ждет нас в грядущем году",
-    //   description_points: "",
-    //   imagePath: dragon
-    // },
-    // {
-    //   name: "Грабитель богатства",
-    //   description: "Дни грабителя — это дни, когда деньги могут уйти из вашего кошелька. Поэтому рекомендуется самим запланировать траты, чтобы финансы не ушли сами собой.",
-    //   description_points: "",
-    //   imagePath: gold_dragon
-    // }
     ])
 
     const modalWindow_active = ref(false);
@@ -107,13 +70,15 @@
 
     // Закрытие модального окна при клике на крестик 
     const closeModalWindow_button = () => {
-        modalWindow_active.value = false;
-        activeService.value = null;
+      modalWindow_active.value = false;
+      activeService.value = null;
+      document.body.classList.remove('no-scroll')
     }
     // Открытие модального окна при клике на "Читать подробнее"
     const clickReadMore_button = (service) => {
-        modalWindow_active.value = true;
-        activeService.value = service;
+      modalWindow_active.value = true;
+      activeService.value = service;
+      document.body.classList.add('no-scroll')
     }
 
 </script>
@@ -173,34 +138,30 @@
                   </div>
                 </div>
               </div>
-              <div class="modalWindow">
-                <div 
-                    v-if="modalWindow_active"
-                    class="modal-window__wrapper"
-                >
-                  <div class="content-wrapper">
-                    
-                    <div class="content">
-                      <span 
-                        @click="closeModalWindow_button" 
-                        class="close-button"
-                      >
-                        х
-                      </span>
-                      <h2 class="content-h2">{{ activeService.name }}</h2>
-                      <ul 
-                        v-for="point of activeService.description_points" 
-                        :key="point.index" 
-                        class="content-list"
-                      >
-                        <li class="content-list__item">{{point}}</li>
-                        
-                      </ul>
-                      <div class="additionally-info">
-                        <p>Формат: {{ activeService.format }}</p>
-                        <p>Стоимость: {{ activeService.price }}</p>
-                      </div>
+              <div 
+                v-if="modalWindow_active"
+                class="modal-window__wrapper"
+              >
+                <div class="content-wrapper">
+                  <div class="content">
+                    <span 
+                      @click="closeModalWindow_button(e)" 
+                      class="close-button"
+                    >
+                      х
+                    </span>
+                    <h2 class="content-h2">{{ activeService.name }}</h2>
+                    <ul 
+                      v-for="point of activeService.description_points" 
+                      :key="point.index" 
+                      class="content-list"
+                    >
+                      <li class="content-list__item">{{point}}</li>
                       
+                    </ul>
+                    <div class="additionally-info">
+                      <p>Формат: {{ activeService.format }}</p>
+                      <p>Стоимость: {{ activeService.price }}</p>
                     </div>
                   </div>
                 </div>

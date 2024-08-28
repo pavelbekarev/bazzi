@@ -23,11 +23,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9998;
+    z-index: 11;
     height: 100%;
     width: 100%;
     background-color: rgba(83, 83, 83, .7);
     transition: opacity 0.5s ease;
+    overflow: auto;
 
 
 
@@ -41,14 +42,14 @@
         display: none;
     }
     
-    
 
     .content-wrapper {
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        z-index: 11;
+        overflow-y: auto;
+        padding: 100px 0;
 
 
         .close-button {
@@ -77,6 +78,7 @@
             background-color: rgba(178, 178, 178);
             border-radius: 10px;
             overflow: hidden;
+            gap: 10px;
 
 
             &::before {
@@ -131,6 +133,7 @@
                 letter-spacing: 6px;
                 text-transform: uppercase;
                 margin-bottom: 20px;
+                padding: 0 20px;
             }
 
             .content-list {
@@ -139,7 +142,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 text-align: justify;
-                padding: 10px 50px;
+                padding: 0px 50px;
 
 
                 .content-list__item {
@@ -149,5 +152,64 @@
                 }
             }
         }
+    }
+}
+
+
+// media
+
+@media (max-width: 800px) {
+    .modal-window__wrapper .content-wrapper .content {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 675px) {
+    .modal-window__wrapper .content-wrapper .content {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .modal-window__wrapper .content-wrapper .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 507px) {
+    .modal-window__wrapper .content-wrapper .content {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 454px) {
+    .modal-window__wrapper .content-wrapper .content {
+        width: 110%;
+    }
+
+    .modal-window__wrapper .content-wrapper {
+        align-items: normal;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 454px) {
+    .modal-window__wrapper .content-wrapper {
+        align-items: normal;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 410px) {
+    .modal-window__wrapper .content-wrapper .content .content-h2 {
+        font-size: 16px;
+    }
+
+    .modal-window__wrapper .content-wrapper .content .content-list .content-list__item {
+        font-size: 14px;
     }
 }

@@ -172,6 +172,10 @@
             "item2";
     }
 
+    .contact__wrapper .contact-form__wrapper .form__booking .booking__h2 {
+        padding: 0 20px;
+    }
+
     .contact__wrapper .contact-form__wrapper .offer-to-contact {
         grid-area: item2;
         width: 100%;
@@ -184,5 +188,40 @@
 
     .contact__wrapper .contact-form__wrapper .offer-to-contact .socials {
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 410px) {
+    .contact__wrapper .contact-form__wrapper {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 388px) {
+    .contact__wrapper .contact-form__wrapper {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 376px) {
+    .contact__wrapper .contact-form__wrapper .form__booking .form__booking-data {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 356px) {
+    .contact__wrapper .contact-form__wrapper .form__booking .form__booking-data {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .contact__wrapper .contact-form__wrapper .form__booking .booking__h2 {
+        padding: 0 20px;
+    }
+
+    .contact__wrapper .contact-form__wrapper .form__booking .book-button {
+        width: 70%;
     }
 }
