@@ -1,6 +1,6 @@
 .contact__wrapper {
-    background-image: url(../img/contact.jpg);
-    background-size: 100%;
+    background-image: url(../../img/contact.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     display: flex;
@@ -10,9 +10,8 @@
     .contact-form__wrapper {
         display: flex;
         flex-direction: row;
-        width: 970px;
-        height: 764px;
         opacity: .95;
+        padding: 0 20px;
 
 
         .offer-to-contact {
@@ -140,5 +139,50 @@
                 }
             }
         }
+    }
+}
+
+
+@media (max-width: 730px) {
+    .contact__wrapper .contact-form__wrapper .offer-to-contact .offer__h2 {
+        font-size: 32px;
+        transition: all 0.3s ease;
+    }
+    
+    .contact__wrapper .contact-form__wrapper .offer-to-contact .socials .form__offer-icon {
+        width: 70px;
+        height: 70px;
+        transition: all 0.3s ease;
+    }
+}
+
+@media (max-width: 680px) {
+    .contact__wrapper .contact-form__wrapper .form__booking .form__booking-data {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+
+@media (max-width: 620px) {
+    .contact__wrapper .contact-form__wrapper {
+        display: grid;
+        grid-template-areas: 
+            "item1"
+            "item2";
+    }
+
+    .contact__wrapper .contact-form__wrapper .offer-to-contact {
+        grid-area: item2;
+        width: 100%;
+        
+    }
+
+    .contact__wrapper .contact-form__wrapper .offer-to-contact .offer__h2 {
+        margin-top: 30px;
+    }
+
+    .contact__wrapper .contact-form__wrapper .offer-to-contact .socials {
+        margin-bottom: 30px;
     }
 }
