@@ -14,5 +14,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: "https://pavelbekarev.github.io/bazzi/"
+  publicPath: process.env.NODE_ENV === "production" ? "/bazzi/" : "/",
 })
+
+
