@@ -72,7 +72,7 @@
         justify-content: center;
         align-items: center;
         max-width: 370px;
-        height: 27em;
+        height: 30em;
         overflow-y: hidden;
         background-color: #22443A;
         transition: all 0.3s ease;
@@ -155,7 +155,7 @@
 
         &:hover .service__item-h3 {
             font-size: 20px;
-            transform: translate(10px, -130px);
+            transform: translate(10px, -150px);
         }
 
         &:hover .service__item-image {
@@ -180,7 +180,7 @@
 
     .services__content .service__item-wrapper .service__item-h3 {
         font-size: 20px;
-        transform: translate(10px, -130px);
+        transform: translate(10px, -150px);
     }
 
 

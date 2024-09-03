@@ -1,7 +1,7 @@
 <script setup>
 import NavigationComponent from '@/components/Header/NavigationComponent.vue';
 import ChevronRight from '@/utils/chevron-right.vue';
-import { ref } from 'vue';
+import { onBeforeMount, onMounted, ref, watch } from 'vue';
 
 const guideList = ref([
     "Заходим на сайт mingli.ru",
@@ -9,6 +9,37 @@ const guideList = ref([
     "Вводим свои данные в строке информации, далее «Рассчитать»",
     "В своей карте найдите верхний элемент второй колонки. Это и есть Ваш элемент личности"
 ])
+
+var isBurgerActive = ref(false);
+var screenWidth = ref(window.innerWidth);
+
+
+const updateScreenWidth = () => {
+    screenWidth.value = window.innerWidth;
+}
+
+
+watch(screenWidth, () => {
+    if (screenWidth.value <= 580) {
+        isBurgerActive.value = true;
+    }
+
+    else {
+        isBurgerActive.value = false;
+    }
+})
+
+
+onMounted(() => {
+    updateScreenWidth();
+    window.addEventListener("resize", updateScreenWidth);
+});
+
+
+onBeforeMount(() => {
+    window.removeEventListener("resize", updateScreenWidth);
+})
+
 
 </script>
 
@@ -19,6 +50,10 @@ const guideList = ref([
                 <div class="header__menu">
                     <h1 class="header__title">Бацзы - китайская астрология</h1>
                     <NavigationComponent />
+                    <!-- <BurgerComponent 
+                        :is-burger-active="isBurgerActive" 
+                        v-if="isBurgerActive" 
+                    /> -->
                 </div>
             </div>
         </div>

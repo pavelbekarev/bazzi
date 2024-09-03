@@ -83,6 +83,8 @@
 }
 
 
+
+
 .element__wrapper {
     background-color: #22443A;
 
@@ -159,12 +161,15 @@
 
 
         .step {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 15em;
             gap: 2em;
+
+           
 
 
             .guide__image {
@@ -186,10 +191,197 @@
 
             .guide__descr {
                 font-family: "Roboto-Medium";
-                color: #ffffff;
+                color: #C9C9C9;
                 font-size: 24px;
                 text-align: center;
             }
         }
+    }
+}
+
+
+@media (max-width: 1087px) {
+    .about__content-wrapper .item2 .content__wrapper {
+        height: auto;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .about__content-wrapper .item1 {
+        background-position: 40%;
+    }
+
+    .guide__wrapper .guide-steps__wrapper .step .guide__descr {
+        font-size: 20px;
+    }
+
+
+    .element__wrapper .element__content-wrapper .text-content .element__p {
+        font-size: 24px;
+    }
+
+
+    .element__wrapper .element__content-wrapper {
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+
+    .element__wrapper .element__content-wrapper .image-content {
+        background-size: contain;
+    }
+
+
+}
+
+
+@media (max-width: 800px) {
+    .about__content-wrapper .item2 .content__wrapper h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    .about__content-wrapper .item2 .content__wrapper p {
+        font-size: 20px;
+    }
+
+    .element__wrapper .element__h1,
+    .guide__wrapper .guide__h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .guide__wrapper .guide-steps__wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        padding: 0 10px;
+    }
+
+    .guide__wrapper .guide-steps__wrapper .step {
+        background-color: rgba(84, 84, 84, 0.4);
+        max-width: 35em;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease;
+
+        &:first-child::before {
+            content: "Шаг 1";
+        }
+
+        &:nth-child(2)::before {
+            content: "Шаг 2";
+        }
+
+        &:nth-child(3)::before {
+            content: "Шаг 3";
+        }
+
+        &:nth-child(4)::before {
+            content: "Шаг 4";
+        }
+
+        &::before {
+            // content: "день 1";
+            position: absolute;
+            top: -45px;
+            left: 20px;
+            font-size: 20px;
+            color: beige;
+            font-family: "Roboto-Bold";
+            background-color: rgba(71, 71, 71, .9);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        &:hover {
+            background-color: rgba(84, 84, 84, 1);
+            transition: background-color 0.5s ease;
+        }
+    }
+
+    .guide__wrapper .guide-steps__wrapper .step .guide__descr {
+        text-align: justify;
+    }
+
+    .guide__wrapper .guide-steps__wrapper .step .guide__image {
+        display: none;
+    }
+}
+
+
+@media (max-width: 730px) {
+    .element__wrapper .element__content-wrapper .text-content .element__p {
+        font-size: 20px;
+    }
+
+
+    .header .header__title {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 687px) {
+    .about__content-wrapper .item2 .content__wrapper {
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 636px) {
+    .element__wrapper .element__content-wrapper {
+        display: grid;
+        grid-template-areas: 
+            "item1"
+            "item2";
+    }
+
+    .header__wrapper .header__menu ul {
+        gap: 1vh;
+    }
+
+    .element__wrapper .element__content-wrapper .text-content {
+        grid-area: item2;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .element__wrapper .element__content-wrapper .image-content {
+        grid-area: item1;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 585px) {
+    .about__content-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__content-wrapper .item2 .content__wrapper {
+        padding: 0 30px;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .header .header__menu {
+        flex-direction: column;
+    }
+
+    .header .header__title {
+        margin-top: 50px;
+    }
+}
+
+
+@media (max-width: 440px) {
+    .element__wrapper .element__content-wrapper .image-content {
+        width: 100%;
     }
 }

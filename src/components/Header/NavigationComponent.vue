@@ -1,3 +1,7 @@
+<script setup>
+</script>
+
+
 <template>
   <ul>
     <li class="header__menu-item">
