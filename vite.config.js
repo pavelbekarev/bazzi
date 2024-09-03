@@ -13,6 +13,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  publicPath: "https://pavelbekarev.github.io/bazzi/"
+  }
 })
