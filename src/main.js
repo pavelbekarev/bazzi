@@ -8,6 +8,8 @@ import MainPage from './pages/MainPage.vue'
 import PageAbout from './pages/PageAbout.vue'
 
 
+
+
 const router = createRouter({
     routes: [
         {
